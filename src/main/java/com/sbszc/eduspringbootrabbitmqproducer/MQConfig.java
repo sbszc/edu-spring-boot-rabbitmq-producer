@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MQConfig {
 
-    public static final String QUEUE = "message_queue";
-    public static final String EXCHANGE = "message_exchange";
-    public static final String ROUTING_KEY = "message_routingKey";
+    public static final String QUEUE = "my_queue";
+    public static final String EXCHANGE = "my_exchange";
+    public static final String BINDING_KEY = "my_binding_key";
 
     @Bean
     public Queue queue() {
@@ -30,7 +30,7 @@ public class MQConfig {
         return BindingBuilder
                 .bind(queue)
                 .to(topicExchange)
-                .with(ROUTING_KEY);
+                .with(BINDING_KEY);
     }
 
     @Bean

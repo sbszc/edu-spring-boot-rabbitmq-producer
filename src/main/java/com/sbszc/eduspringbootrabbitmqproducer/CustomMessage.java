@@ -1,12 +1,12 @@
 package com.sbszc.eduspringbootrabbitmqproducer;
 
-import lombok.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 public class CustomMessage {
     private String messageId;
     private String message;
